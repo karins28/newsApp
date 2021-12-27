@@ -1,0 +1,48 @@
+
+html, body, .root, .App {
+  height: 100%;
+  margin: 0;
+  /*overflow: hidden;*/
+}
+
+.App {
+  margin: 30px;
+}
+
+.articles{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  .article-item{
+    border: 1px solid gray;
+    width: 300px;
+    img{
+      height: 300px;
+      width: 300px;
+    }
+    .article-section, img{
+      padding-bottom: 16px;
+    }
+  }
+}
+.filter-container{
+  .input-container{
+    width: 50%;
+    margin-bottom: 16px;
+  }
+
+  .input-group{
+    align-items: center;
+    .input-group-text {
+      background: white;
+      border: none;
+    }
+  }
+}
+.article-container{
+  padding: 30px;
+  img{
+    height: 500px;
+    width: 800px;
+  }
+}

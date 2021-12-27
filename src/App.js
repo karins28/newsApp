@@ -1,15 +1,19 @@
-import './App.css';
+import './App.less';
+import {NewsPage} from "./pages/news-page";
+import {Route, Switch, withRouter} from "react-router-dom";
+import {ArticlePage} from "./pages/article-page";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          title
-        </p>
-      </header>
-    </div>
+      <Switch>
+          <Route exact={true} path='/' component={NewsPage}/>
+          <Route
+              component={ArticlePage}
+              exact={true}
+              path="/article-info"
+          />
+      </Switch>
   );
 }
 
-export default App;
+export default withRouter(App);
